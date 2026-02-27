@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Darikson Leaños | Portafolio</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">Darikson.dev</div>
+        <ul class="nav-links">
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#padre">Contacto Tutor</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>MI PERFIL PERSONAL</h1>
+        <p>Darikson Adriel Leaños Torres</p>
+        <a href="#sobre-mi" class="btn-primary">Explorar perfil</a>
+        <div class="hero-image">
+    <img src="img/WhatsApp Image 2026-02-27 at 12.25.20 (1).jpeg" alt="Foto de Darikson">
+</div>
+    </div>
+</section>
+
+<section id="sobre-mi" class="section reveal">
+    <h2>Mi camino y formación</h2>
+    <div class="grid">
+
+        <div class="card">
+            <img src="img/depositphotos_12824519-stock-illustration-graduation-cap-and-diploma-vector.jpg">
+            <h3>Formación academica y datos personales</h3>
+            <button onclick="toggleInfo('formacion')">Ver detalles</button>
+            <div id="formacion" class="contenido">
+                <p>
+                _Nacido en Sucre - Bolivia (31/01/2008)<br>
+                _Padre: Eleuterio Leaños Siles<br>
+                _Madre: Felicia Torres Beltran<br>
+                _Escuela Primaria: Adolfo Siles<br>
+                _Secundaria: Colegio Nacional Junin<br>
+                _Egresado Con Titulo de Bachiller y Tecnico Humanistico en Mec. Automotriz<br>
+                _Nivel de inglés: Básico y cursando el curso de ingles técnico en tecnología de la Usfx<br>
+                con el objetivo de obtener el nivel de Inglés A2 y B2.<br>
+                Habilidades sociales y comepetencias: Empatia, responsabilidad, puntualidad<br>
+                Talentos: Tocar la bateria<br>
+                Actualmente estudiante de Ingeniería en Sistemas en la USFX
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/depositphotos_624177752-stock-illustration-business-success-man-standing-top.jpg">
+            <h3>Logros</h3>
+            <button onclick="toggleInfo('logros')">Ver logros</button>
+            <div id="logros" class="contenido">
+                <p>
+                _Mejor Bachiller hombre del colegio Nal. Junin 2025<br>
+                -Acreedor del incentivo al Bachiller Destacado 2025-Colegio Junin<br>
+                -Mejor Calificación del Examen de Admisión Preuniversitario USFX 2025
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/1678262293389.png">
+            <h3>Ensayo. Por qué decidí estudiar Ing. en Sistemas?</h3>
+            <a href="ENSAYO.docx" target="_blank">
+                <button>Abrir en Word</button>
+            </a>
+        </div>
+
+        
+
+    </div>
+</section>
+
+<section id="contacto" class="section contacto reveal">
+    <h2>Contacto</h2>
+    <p>Gmail: leanostorresdariksonadriel@gmail.com</p>
+    <p>Teléfono: 67633628</p>
+</section>
+
+<section id="padre" class="section contacto reveal">
+    <h2>Contacto Padre de Familia</h2>
+    <p>Eloy Leaños Torres</p>
+    <p>Teléfono: 72896700</p>
+</section>
+
+<footer>
+    © 2026 Darikson Leaños - Portafolio Personal
+</footer>
+
+<script>
+function toggleInfo(id){
+    document.getElementById(id).classList.toggle("mostrar");
+}
+
+/* Animación al hacer scroll */
+const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+    reveals.forEach(el => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        if(elementTop < windowHeight - 100){
+            el.classList.add("active");
+        }
+    });
+});
+</script>
+
+</body>
+</html>
